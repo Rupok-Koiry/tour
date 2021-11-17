@@ -1,0 +1,7 @@
+- Run npm install both client & server folder
+- Change firebase configuration from firebase.config.js
+- Create a .env file in server folder then write that according to your database DB_USER=YOUR_USERNAME DB_PASSWORD=YOUR_PASSWORD
+- Change the uri from index.js
+- Need a banner on home page
+- client/public/fakeData.json there is one fake data and all data that you created must have exact same property
+- I have written some lorem ipsum you have to change that
