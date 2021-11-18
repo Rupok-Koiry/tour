@@ -26,6 +26,7 @@ async function run() {
     const database = client.db("tours");
     const tourCollection = database.collection("tours");
     const orderCollection = database.collection("orders");
+
     /* ====================Tours Api ========================= */
     //GET API
     app.get("/tours", async (req, res) => {

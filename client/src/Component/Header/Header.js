@@ -7,7 +7,7 @@ const Header = () => {
   const { user, logout } = useAuth();
   const history = useHistory();
   return (
-    <header className="header">
+    <header className="header sticky-top">
       <nav className="navbar navbar-expand-lg navbar-light navLinkContainer">
         <div className="container">
           <Link className="navbar-brand" to="/">

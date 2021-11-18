@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 import About from "../../About/About";
+import Banner from "../../Banner/Banner";
 import Reviews from "../../Reviews/Reviews";
 import Service from "../Service/Service";
 
 const Home = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("/fakeData.json")
+    fetch("http://localhost:8000/tours")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
 
   return (
     <>
+      <Banner />
       <section className="all--tours">
         <h2 className="display-5 text-center section-heading">
           MOST POPULAR TOURS

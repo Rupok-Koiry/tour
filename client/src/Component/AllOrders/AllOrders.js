@@ -37,6 +37,7 @@ const AllOrders = () => {
       body: JSON.stringify({ status: "approved" }),
     });
     const responseData = await response.json();
+    console.log(responseData);
     if (responseData.ok > 0) {
       loadOrders();
     }
@@ -63,7 +64,9 @@ const AllOrders = () => {
           <tbody>
             {orders.map((order) => (
               <tr key={order._id}>
-                <th scope="row">{count++}</th>
+                <th scope="row">
+                  {count++} {order._id}
+                </th>
                 <td>{order.name}</td>
                 <td>{order.email}</td>
                 <td>

@@ -35,21 +35,22 @@ const PlaceOrder = (props) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    const userOrder = {
+      ...userInfo,
+      ...props.desireService,
+      status: "pending",
+    };
+    delete userOrder._id;
     fetch("http://localhost:8000/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        ...userInfo,
-        ...props.desireService,
-        status: "pending",
-      }),
+      body: JSON.stringify(userOrder),
     });
     history.push("/myorders");
   };
 
-  useEffect(() => {}, []);
   return (
     <div className="container my-3">
       <div className="row gx-5 align-items-center">

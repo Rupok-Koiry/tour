@@ -8,7 +8,7 @@ const Details = () => {
   const [product, setProducts] = useState({});
 
   useEffect(() => {
-    fetch("/fakeData.json")
+    fetch("http://localhost:8000/tours")
       .then((res) => res.json())
       .then((data) => setProducts(data.find((item) => item.id === +detailsId)));
   }, [detailsId]);
