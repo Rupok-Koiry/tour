@@ -68,7 +68,7 @@ const MyOrder = () => {
                 <td>${order.cost}</td>
                 <td>
                   {" "}
-                  <span
+                  <small
                     style={{
                       background: `${
                         order.status === "pending" ? "#077E8C" : "#28B487"
@@ -78,7 +78,7 @@ const MyOrder = () => {
                   >
                     {" "}
                     {order.status === "pending" ? "Pending" : "Approved"}
-                  </span>
+                  </small>
                 </td>
                 <td>
                   <i

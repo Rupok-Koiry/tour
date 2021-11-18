@@ -47,7 +47,7 @@ const Service = (props) => {
             style={{ background: "#7ea0ff" }}
             onClick={() => history.push(`/details/${id}`)}
           >
-            Book Now dff
+            Book Now
           </button>
         </div>
       </div>

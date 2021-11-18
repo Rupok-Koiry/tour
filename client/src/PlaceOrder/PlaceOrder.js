@@ -46,7 +46,7 @@ const PlaceOrder = (props) => {
         status: "pending",
       }),
     });
-    history.push("/order");
+    history.push("/myorders");
   };
 
   useEffect(() => {}, []);
